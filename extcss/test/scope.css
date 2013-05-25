@@ -1,0 +1,5 @@
+#id{a1:xxxx;a2:xxxx;}
+#id clr1{c:1;a1:xxxx;a2:xxxx!important;a3:xxxx;}
+#id clr1 clr1{}
+#id clr2{c:1;a1:xxxx;a2:xxxx;a3:xxxx;}
+#id a:hover{c:1;a1:xxxx;a2:xxxx;a3:xxxx;}

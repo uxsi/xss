@@ -1,0 +1,28 @@
+$color=raphealguo;
+color($xxx=2px 2px 3px,$color){
+  a1:$xxx;
+  a3:$color;
+}
+
+#id1{
+  color(){
+    a:33;
+    b:$color;
+  }
+  color();
+}
+#id2{
+  color(2 3px);
+}
+#id3{
+  color(4px, 3px);
+}
+#id3{
+  color(4px);
+}
+.br ($s: 5px) {
+	border-radius:$s;
+	-moz-border-radius:$s;
+	-webkit-border-radius:$s;
+}
+.br5{	.br(5px);	}

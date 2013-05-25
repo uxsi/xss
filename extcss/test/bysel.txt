@@ -1,0 +1,19 @@
+$color=raphealguo;
+$color($xxx=2px 2px 3px,$color){
+  a1:$xxx;
+  a3:$color;
+}
+
+#id1, .clr{
+  $color(2 3px);
+}
+xx xx xx{
+  b:1;
+}
+#id2{
+  b:1;
+  ${ #id1 };
+  #id1;
+  .clr;
+  #id1,.clr,xx xx xx;
+}

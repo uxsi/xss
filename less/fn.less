@@ -1,0 +1,177 @@
+//==================================================
+
+// LESS函数库
+// by xushengni
+// 注意！！！！
+// 要求本文件不能产生任何CSS代码，只是提供函数库给其他LESS文件调用。
+
+//==================================================
+
+
+// 盒子模型
+.w(@w){width:@w;}
+.h(@h){height:@h;}
+.size(@w,@h){.w(@w);.h(@h);}
+.square(@size){.size(@size, @size); }
+
+.pt(@pt){padding-top:@pt}
+.pl(@pl){padding-left:@pl}
+.pr(@pr){padding-right:@pr}
+.pb(@pb){padding-bottom:@pb}
+.p(@padding){padding:@padding;}
+
+.mt(@pt){margin-top:@pt}
+.ml(@pl){margin-left:@pl}
+.mr(@pr){margin-right:@pr}
+.mb(@pb){margin-bottom:@pb}
+.m(@margin){margin:@margin;}
+
+.center(@w){.w(@w);.ml(auto);.mr(auto);}
+
+
+// 背景 与 颜色
+.bg(@url:"", @x:0, @y:0){background:transparent ~"url(@{url})" no-repeat @x @y; }
+.bgc(@c){background-color:@c; }
+.c(@c){color:@c;}
+
+
+// 字体
+.f(@s:14px){font-size:@s;}
+.fw(@fw){font-weight:@fw;}
+.lh(@lh:1.6){line-height:@lh;}
+
+
+// CSS3: 文字阴影
+.ts(@x:0, @y:1px, @r:1px, @c:rgba(0,0,0,.5)){
+  text-shadow:@x @y @r @c;
+}
+
+
+// CSS3: 圆角
+.br(@s: 5px) {
+  border-radius:@s;
+  -moz-border-radius:@s;
+  -webkit-border-radius:@s;
+}
+
+.br_tl(@radius) {
+  -webkit-border-top-left-radius: @radius;
+      -moz-border-radius-topleft: @radius;
+          border-top-left-radius: @radius;
+}
+.br_tr(@radius) {
+  -webkit-border-top-right-radius: @radius;
+      -moz-border-radius-topright: @radius;
+          border-top-right-radius: @radius;
+}
+.br_br(@radius) {
+  -webkit-border-bottom-right-radius: @radius;
+      -moz-border-radius-bottomright: @radius;
+          border-bottom-right-radius: @radius;
+}
+.br_bl(@radius) {
+  -webkit-border-bottom-left-radius: @radius;
+      -moz-border-radius-bottomleft: @radius;
+          border-bottom-left-radius: @radius;
+}
+
+.br-t(@radius) {
+  .border-top-right-radius(@radius);
+  .border-top-left-radius(@radius);
+}
+.br-r(@radius) {
+  .border-top-right-radius(@radius);
+  .border-bottom-right-radius(@radius);
+}
+.br-b(@radius) {
+  .border-bottom-right-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+.br-l(@radius) {
+  .border-top-left-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+
+
+// CSS3: 阴影
+
+// for backup:
+// .bs(@type, @rest...) when(isstring(@type)){
+//   box-shadow:@rest;
+//   -moz-box-shadow:@rest;
+//   -webkit-box-shadow:@rest;
+// }
+// .bs(@type, @rest...) when(iskeyword(@type)){
+//   box-shadow:@arguments;
+//   -moz-box-shadow:@arguments;
+//   -webkit-box-shadow:@arguments;
+// }
+
+
+
+// for "backup" test
+// .box1{.bs(inset,1px,1px,1px,#FFFFFF);}
+// .box2{.bs("",1px,1px,1px,#FFFFFF);}
+
+
+.bs(...){
+  box-shadow:@arguments;
+  -moz-box-shadow:@arguments;
+  -webkit-box-shadow:@arguments;
+}
+
+
+
+
+// CSS3: 渐变
+.lg(@startColor: #F1F1F1, @start:0, @endColor: #F8F8F8, @stop:100%){
+  background-color: mix(@startColor, @endColor, 60%);
+  background-image: -moz-linear-gradient(top, @startColor @start, @endColor @stop);
+  background-image: -webkit-gradient(linear, 0 @start, 0 @stop, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(top, @startColor @start, @endColor @stop);
+  background-image: -o-linear-gradient(top, @startColor @start, @endColor @stop);
+  background-image: linear-gradient(to bottom, @startColor @start, @endColor @stop);
+}
+.lg-3(@startColor: #F1F1F1, @start:0, @midColor:#F4F4F4, @mid: 60%, @endColor: #F8F8F8, @stop:100%){
+  background-color: mix(@startColor, @endColor, 60%);
+  background-image: -moz-linear-gradient(top, @startColor @start, @midColor @mid, @endColor @stop);
+  background-image: -webkit-gradient(linear, 0 @start, 0 @stop, from(@startColor), color-stop(@mid, @midColor), to(@endColor));
+  background-image: -webkit-linear-gradient(top, @startColor @start, @midColor @mid, @endColor @stop);
+  background-image: -o-linear-gradient(top, @startColor @start, @midColor @mid, @endColor @stop);
+  background-image: linear-gradient(to bottom, @startColor @start, @midColor @mid, @endColor @stop);
+}
+
+
+
+// placeholder
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &::-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+
+
+// 翻转
+.flipx(){
+    -moz-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+    filter:FlipH;
+}
+.flipy(){
+    -moz-transform:scaleY(-1);
+    -webkit-transform:scaleY(-1);
+    -o-transform:scaleY(-1);
+    transform:scaleY(-1);
+    filter:FlipV;
+}

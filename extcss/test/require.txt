@@ -1,0 +1,19 @@
+@charset "utf-8";
+@require "css.txt"
+@require "var.txt"
+@require "function.txt"
+@import url("./a.css");
+
+#id{
+  div{
+    c:$color;
+  }
+}
+
+#id2{
+  $color(2 3px);
+}
+
+#id3{
+  ${b};
+}

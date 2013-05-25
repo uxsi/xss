@@ -1,0 +1,8 @@
+#id, .clr{
+	& div{
+		c:1;
+	}
+  &:hover{
+    color:#eee;
+  }
+}

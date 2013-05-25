@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+
+/* COXX */
+a[name="text"],cc:hover, div > c1 .clr + xx .xsss{c:1;cs:2;}b{xxx:xxxx;cs:0.20em}
+div div:hover{
+	c : 1;
+	cs : 2;
+}
+avc,ss,c,c{}
+d,ss,dd{
+  a1:22px;
+  a23:ddd
+}
+@page :left{
+	#id{
+	}
+  #id .clr{
+    color:#eee repeat-x;
+  }
+}

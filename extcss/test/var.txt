@@ -1,0 +1,12 @@
+$color = 11.100000em;
+
+#id{border:1px solid #eee;}
+.clr{
+  $color = #ddd;
+  $CCC = 0px;
+  $DDDxcx1 = 555555.00001px;
+  a : $color $CCC $DDDxcx1;
+}
+.clr{background:url("./xxx.jpg") no-repeat 0.0 0 scoll;border:1px solid #eee;}
+.clr{a:filter(0.1111px, $color);}
+div{$color3=#dscxzcx;a:$color $color3;}

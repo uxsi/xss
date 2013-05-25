@@ -1,0 +1,63 @@
+
+
+// =====grids class============
+
+.line{.oh;.z;}
+.unit{.l;}
+.unitRight{.r;}
+.unit{
+	&.size1of1{.fn;}
+	&.size1of2{.w(50%);}
+	&.size1of3{.w(33.33333%);}
+	&.size2of3{.w(66.66666%);}
+	&.size1of4{.w(25%);}
+	&.size3of4{.w(75%);}
+	&.size1of5{.w(20%);}
+	&.size2of5{.w(40%);}
+	&.size3of5{.w(60%);}
+	&.size4of5{.w(80%);}
+	&.last{.fn;.oh;.z;*overflow:visible;}
+}
+
+// =====end of grids class============
+
+
+
+// ======template class===========
+
+@pageWidth:100%;
+@wrapperWidth:100%;
+@leftColWidth:250px;
+@rightColWidth:250px;
+
+.page{
+	.center(@pageWidth);
+
+	// 在这里扩展.page，如.gs960
+	&.gs960{.w(960px);}
+}
+
+// 有些时候会出现.header>.wrapper的情况
+.wrapper{.center(@wrapperWidth);}
+
+.head{}
+.body{}
+.foot{}
+
+.main{.oh;.z;}
+.leftCol{
+	.l;.w(@leftColWidth);
+
+	// 在这里扩展.rightCol类，如.gMail
+	&.gMail{.w(250px);}
+}
+.rightCol{
+	.r;.w(@rightColWidth);
+
+	// 在这里扩展.rightCol类，如.yahoo
+	&.yahoo{.w(250px);}
+}
+
+// ======end of template class===========
+
+

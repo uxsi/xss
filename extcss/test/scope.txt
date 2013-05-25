@@ -1,0 +1,23 @@
+#id{
+  a1:xxxx;
+  a2:xxxx;
+  clr1{
+    c:1;
+    a1:xxxx;
+    a2:xxxx!important;
+    a3:xxxx;
+    clr1{};
+  }
+  clr2{
+    c:1;
+    a1:xxxx;
+    a2:xxxx;
+    a3:xxxx
+  }
+  a:hover{
+    c:1;
+    a1:xxxx;
+    a2:xxxx;
+    a3:xxxx
+  }
+}

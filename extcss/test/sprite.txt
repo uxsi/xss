@@ -1,0 +1,21 @@
+div{
+  width:300px;
+  height:300px;
+  margin-bottom:10px;
+  border-bottom:3px solid #000;
+}
+#id1{
+  background:sprite("../imgs/1.png", "../imgs/out.png");
+}
+#id2{
+  background:sprite("../imgs/2.png", "../imgs/out.png") repeat-x transparent;
+}
+#id3{
+  background:sprite("../imgs/icon.png", "../imgs/out2.jpg", repeat-y transparent);
+}
+#id4{
+  background:sprite("../imgs/1.jpg", "../imgs/out2.jpg", no-repeat transparent);
+}
+#id5{
+  background:sprite("../imgs/1.jpg", "../imgs/out3.jpg", no-repeat transparent);
+}
