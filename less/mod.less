@@ -1,10 +1,23 @@
+
 // mod: 不可嵌套
 .mod{
+	.m(10px);
+	.inner{.f(14px);}
+	.hd{}
+	.bd{}
+	h3{.b;}
+	p{.f(14px);}
 
+	// 在这里扩展.mod
+	&.complex{
+		.inner{}
+		.hd{.p(8px);border-bottom:1px dotted #000000;}
+		.bd{.p(8px);}
+		h3{}
+		p{}
+	}
 }
 
-
-// complex: 可嵌套
-.complex{
-	
+.skin_extend{
+	.bgc(@light_yellow);
 }

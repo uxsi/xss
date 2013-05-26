@@ -2,10 +2,82 @@
 <html lang="zh_CN">
 <head>
 	<meta charset="UTF-8">
-	<title>test</title>
-	<link rel="stylesheet" href="fn.css" media="all">
+	<title>XSS Demo</title>
+	<link rel="stylesheet" href="css/demo.css" media="screen">
 </head>
 <body>
-	<p class="box"><span class="text_hide">transparent text</span>text</p>
+	<div class="page demo">
+		<div class="head">
+			<h1 class="logo" title="this is site logo, shows XSS Demo">XSS Demo</h1>
+			<ul class="menu">
+				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
+				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
+				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
+				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
+				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
+			</ul>
+			<a href="javascript:;" class="menu_switch" title="menu switch">switch</a>
+		</div>
+		<div class="body">
+			<div class="banner"><img src="img/banner.jpg" alt="the fast and the fabulous" title="this is a banner img, shows ‘the fast and the fabulous’"></div>
+			<div class="leftCol">
+				<h2 class="col_title">Left Column</h2>
+				<p class="col_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...</p>
+
+				<div class="mod complex skin_extend">
+					<div class="inner">
+						<div class="hd">
+							<h3>complex title</h3>
+						</div>
+						<div class="bd">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="main">
+				<h2 class="col_title">Main Column</h2>
+				<p class="col_desc">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+
+				<div class="line">
+
+					<div class="unit size1of3">
+						<div class="mod">
+							<div class="inner">
+								<h3>mod title</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="unit size1of3">
+						<div class="mod">
+							<div class="inner">
+								<h3>mod title</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="unit size1of3 last">
+						<div class="mod">
+							<div class="inner">
+								<h3>mod title</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="foot">
+			<p class="copyright">© <em class="author">xushengni</em> 2013</p>
+		</div>
+	</div>
 </body>
 </html>

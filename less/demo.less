@@ -4,4 +4,28 @@
 @import "mod";
 
 
+@linkColor:#666666;
+@linkColorHover:#333333;
+@linkColorActive:#333333;
 
+
+.col_title,.col_desc{.p(10px 10px 0);}
+.col_title{.f(16px);.b;}
+.col_desc{.f(14px);}
+
+.logo{.l;.f(20px);}
+.menu{
+	.r;.f(14px);
+	li{
+		.b_dib;.ml(10px);.mr(10px);
+		a{.db;.tdn;.c(@linkColor);&:hover{.c(@linkColorHover);.bgc(#F1F1F1);}&:avtive{.c(@linkColorActive);.bgc(#F1F1F1);}}
+	}
+	&_switch{.dn;}
+}
+.banner{
+	img{.w(100%);}
+}
+.copyright{
+	.mt(1em);.pr(1em);.tr;.f(12px);.lh(26px);
+	.author{.i;&:hover{border-bottom:1px dotted #000000;}}
+}

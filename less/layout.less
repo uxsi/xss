@@ -25,7 +25,7 @@
 
 // ======template class===========
 
-@pageWidth:100%;
+@pageWidth:80%;
 @wrapperWidth:100%;
 @leftColWidth:250px;
 @rightColWidth:250px;
@@ -35,16 +35,19 @@
 
 	// 在这里扩展.page，如.gs960
 	&.gs960{.w(960px);}
+	&.liqiud{.w(100%);}
+	&.demo{max-width:1000px;}
 }
 
 // 有些时候会出现.header>.wrapper的情况
 .wrapper{.center(@wrapperWidth);}
 
-.head{}
-.body{}
-.foot{}
+.head,.body,.foot,.main{.oh;.z;}
+.head{
+	.demo &{.p(20px 0);}
+}
 
-.main{.oh;.z;}
+
 .leftCol{
 	.l;.w(@leftColWidth);
 
