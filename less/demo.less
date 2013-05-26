@@ -9,6 +9,15 @@
 @linkColorActive:#333333;
 
 
+.page{
+	// 在这里扩展.page，如.demo
+	&.demo{max-width:1000px;}
+}
+.head{
+	// .page.demo 下的head
+	.demo &{.p(20px 0);}
+}
+
 .col_title,.col_desc{.p(10px 10px 0);}
 .col_title{.f(16px);.b;}
 .col_desc{.f(14px);}
@@ -18,14 +27,32 @@
 	.r;.f(14px);
 	li{
 		.b_dib;.ml(10px);.mr(10px);
-		a{.db;.tdn;.c(@linkColor);&:hover{.c(@linkColorHover);.bgc(#F1F1F1);}&:avtive{.c(@linkColorActive);.bgc(#F1F1F1);}}
+		a{
+			.db;.tdn;.c(@linkColor);
+			&:hover{.c(@linkColorHover);.bgc(#F1F1F1);}
+			&.current,&:active{.c(@linkColorActive);.bgc(#F1F1F1);}
+		}
 	}
-	&_switch{.dn;}
 }
 .banner{
 	img{.w(100%);}
 }
 .copyright{
-	.mt(1em);.pr(1em);.tr;.f(12px);.lh(26px);
+	.mt(1em);.pr(1em);.tr;.f(12px);.lh(26px); 
 	.author{.i;&:hover{border-bottom:1px dotted #000000;}}
 }
+
+// ======responsive class===========
+
+@media only screen and (max-width: 767px){
+	.logo{.fn;}
+	.menu{
+		.fn;
+		li{
+			.db;.m(0);
+		}
+	}
+
+}
+
+// ======end of responsive class===========

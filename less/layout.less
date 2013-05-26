@@ -4,7 +4,6 @@
 
 .line{.oh;.z;}
 .unit{.l;}
-.unitRight{.r;}
 .unit{
 	&.size1of1{.fn;}
 	&.size1of2{.w(50%);}
@@ -30,37 +29,37 @@
 @leftColWidth:250px;
 @rightColWidth:250px;
 
-.page{
-	.center(@pageWidth);
+.page{.center(@pageWidth); }
 
-	// 在这里扩展.page，如.gs960
-	&.gs960{.w(960px);}
-	&.liqiud{.w(100%);}
-	&.demo{max-width:1000px;}
-}
-
-// 有些时候会出现.header>.wrapper的情况
+// 有些时候会出现.head>.wrapper的情况
 .wrapper{.center(@wrapperWidth);}
 
 .head,.body,.foot,.main{.oh;.z;}
-.head{
-	.demo &{.p(20px 0);}
-}
 
+.leftCol{.l;.w(@leftColWidth);}
+.rightCol{.r;.w(@rightColWidth);}
 
-.leftCol{
-	.l;.w(@leftColWidth);
-
-	// 在这里扩展.rightCol类，如.gMail
-	&.gMail{.w(250px);}
-}
-.rightCol{
-	.r;.w(@rightColWidth);
-
-	// 在这里扩展.rightCol类，如.yahoo
-	&.yahoo{.w(250px);}
-}
+// 自定义页面栏目
+.primaryCol{}
+.subCol{}
+.extCol{}
 
 // ======end of template class===========
 
 
+
+
+// =======responsive class==========
+
+@media only screen and (max-width: 767px){
+
+	// template
+	.page{.w(auto);.pl(15px);.pr(15px);}
+	.leftCol,.rightCol{.fn;.w(auto);}
+
+	// grids
+	.unit{.fn;width:auto!important;}
+
+}
+
+// ======end of responsive class===========

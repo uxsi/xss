@@ -66,7 +66,6 @@ textarea{overflow:auto;vertical-align:top;}
 .text_overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .line{overflow:hidden;*zoom:1;}
 .unit{float:left;}
-.unitRight{float:right;}
 .unit.size1of1{float:none;}
 .unit.size1of2{width:50%;}
 .unit.size1of3{width:33.33333%;}
@@ -78,26 +77,25 @@ textarea{overflow:auto;vertical-align:top;}
 .unit.size3of5{width:60%;}
 .unit.size4of5{width:80%;}
 .unit.last{float:none;overflow:hidden;*zoom:1;*overflow:visible;}
-.page{width:80%;margin-left:auto;margin-right:auto;}.page.gs960{width:960px;}
-.page.liqiud{width:100%;}
-.page.demo{max-width:1000px;}
+.page{width:80%;margin-left:auto;margin-right:auto;}
 .wrapper{width:100%;margin-left:auto;margin-right:auto;}
 .head,.body,.foot,.main{overflow:hidden;*zoom:1;}
-.demo .head{padding:20px 0;}
-.leftCol{float:left;width:250px;}.leftCol.gMail{width:250px;}
-.rightCol{float:right;width:250px;}.rightCol.yahoo{width:250px;}
-.mod{margin:10px;}.mod .inner{font-size:14px;}
+.leftCol{float:left;width:250px;}
+.rightCol{float:right;width:250px;}
+@media only screen and (max-width:767px){.page{width:auto;padding-left:15px;padding-right:15px;} .leftCol,.rightCol{float:none;width:auto;} .unit{float:none;width:auto!important;}}.mod{margin:10px;}.mod .inner{font-size:14px;}
 .mod h3{font-weight:700;}
 .mod p{font-size:14px;}
 .mod.complex .hd{padding:8px;border-bottom:1px dotted #000000;}
 .mod.complex .bd{padding:8px;}
 .skin_extend{background-color:#fef2c0;}
+.page.demo{max-width:1000px;}
+.demo .head{padding:20px 0;}
 .col_title,.col_desc{padding:10px 10px 0;}
 .col_title{font-size:16px;font-weight:700;}
 .col_desc{font-size:14px;}
 .logo{float:left;font-size:20px;}
 .menu{float:right;font-size:14px;}.menu li{display:inline-block;*display:inline;*zoom:1;margin-left:10px;margin-right:10px;}.menu li a{display:block;text-decoration:none;color:#666666;}.menu li a:hover{color:#333333;background-color:#f1f1f1;}
-.menu li a:avtive{color:#333333;background-color:#f1f1f1;}
-.menu_switch{display:none;}
+.menu li a.current,.menu li a:active{color:#333333;background-color:#f1f1f1;}
 .banner img{width:100%;}
 .copyright{margin-top:1em;padding-right:1em;text-align:right;font-size:12px;line-height:26px;}.copyright .author{font-style:italic;}.copyright .author:hover{border-bottom:1px dotted #000000;}
+@media only screen and (max-width:767px){.logo{float:none;} .menu{float:none;}.menu li{display:block;margin:0;}}

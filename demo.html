@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>XSS Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/demo.css" media="screen">
 </head>
 <body>
@@ -11,12 +12,11 @@
 			<h1 class="logo" title="this is site logo, shows XSS Demo">XSS Demo</h1>
 			<ul class="menu">
 				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
-				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
+				<li><a href="javascript:;" title="menu: menu item" class="current">menu item</a></li>
 				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
 				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
 				<li><a href="javascript:;" title="menu: menu item">menu item</a></li>
 			</ul>
-			<a href="javascript:;" class="menu_switch" title="menu switch">switch</a>
 		</div>
 		<div class="body">
 			<div class="banner"><img src="img/banner.jpg" alt="the fast and the fabulous" title="this is a banner img, shows ‘the fast and the fabulous’"></div>
